@@ -1,0 +1,113 @@
+<%- include("partials/header.ejs") %>
+
+<div class="card">
+     <div class="form-group">
+          <h1>SIGN UP FORM</h1>
+     </div>
+     
+<form action="/register" method="post">
+ <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>NAME*</label>
+           <input class="form-control" type="text" name="name" required="">
+        </div>
+       <div class="col-md-6 col-sm-12" >
+            <label>USERNAME*</label>
+           <input class="form-control" type="text" name="username" required="">
+        </div>
+    </div>
+ </div>
+<div class="form-group">
+    <div class="row">
+         <div class="col-md-6 col-sm-12" >
+            <label>PASSWORD*</label>
+            <input class="form-control" type="password" name="pswd" required="">
+        </div>
+        <div class="col-md-6 col-sm-12" >
+            <label>RE-TYPE PASSWORD*</label>
+           <input class="form-control" type="password" name="pswd2" required="">
+        </div>
+    </div>
+ </div>
+ <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>SELECT A SECURITY QUESTION*</label>
+            <select class="form-control">
+                   <option value="What is your favourite Book to read?">What is your favourite Book to read?</option>
+                   <option value="What is your favourite Place to visit?">What is your favourite Place to visit?</option>
+                   <option value="What is the name of your Girlfriend?">What is the name of your Girlfriend?</option>
+            </select>
+        </div>
+         <div class="col-md-6 col-sm-12" >
+            <label>ANSWER FOR SECURITY QUESTION*</label>
+           <input class="form-control" type="text" name="ans" placeholder="">
+        </div>
+    </div>
+ </div>
+          <div class="form-group">
+              <h3><i class="fa fa-address-card" aria-hidden="true"></i> CONTACT INFO</h3>
+          </div>
+         <div class="form-group">
+          <div class="row">
+                <div class="col-md-6 col-sm-12" >
+                  <label>STATE</label>
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                          <input class="form-control" type="text" name="state" placeholder="">
+                      </div>
+                </div>
+              <div class="col-md-6 col-sm-12" >
+                 <label>DISTRICT</label>
+                   <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-apple" aria-hidden="true"></i></span>
+                        <input class="form-control" type="text" name="dist" placeholder="">
+                   </div>
+               </div>
+          </div>
+       </div>
+  <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>CITY</label>
+              <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-cc" aria-hidden="true"></i></span>
+           <input class="form-control" type="text" name="city" placeholder="">
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12" >
+          <label for="instname">PHONE NUMBER</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+             <input class="form-control" type="text" name="phoneno" placeholder="">
+         </div>
+       </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>EMAIL ID</label>
+            <div class="input-group">
+               <span class="input-group-addon"><i class="fa fa-google" aria-hidden="true"></i></span>
+               <input class="form-control" type="email" name="email" placeholder="">
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12" >
+          <label for="instname">COLLEGE/SCHOOL NAME</label>
+           <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+             <input class="form-control" type="text" name="instname" placeholder="">
+             </div>
+         </div>
+    </div>
+  </div>
+    <div class="form-group">
+          <p><button class="btn btn-primary">SIGN UP</button></p>
+    </div>
+</form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

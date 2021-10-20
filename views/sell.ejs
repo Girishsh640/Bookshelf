@@ -1,0 +1,101 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+  <div class="card">
+   <div class="form-group">
+    <h1><i class="fa fa-plus-square" aria-hidden="true"></i> ADD A NEW BOOK</h1>
+   </div>
+      
+     <form action="/books" method="POST">
+         <div class="form-group">
+          <label for="name">TITTLE FOR BOOK</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-text-width" aria-hidden="true"></i></span>
+           <input class="form-control" type="text" name="name" placeholder="NAME OF THE BOOK">
+           </div>
+         </div>
+         <div class="form-group">
+          <label for="image">IMAGE URL</label>
+            <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-link" aria-hidden="true"></i></span>
+            <input class="form-control" type="text" name="image" placeholder="IMAGE OF THE BOOK">
+            </div>
+         </div>
+         <div class="form-group">
+          <label for="name">EXPECTED PRICE</label>
+            <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-inr" aria-hidden="true"></i></span>
+           <input class="form-control" type="text" name="mrp" placeholder="MRP FOR THE BOOK">
+           </div>
+         </div>
+         <div class="form-group">
+          <label for="description">DESCRIPTION</label>
+             <textarea class="form-control" rows="5" name="description" placeholder="DESCRIBE HERE CONDITION OF BOOKS AND DO PROVIDE RATINGS ALSO"></textarea>
+         </div>
+         <div class="form-group">
+          <h3><i class="fa fa-address-card" aria-hidden="true"></i> CONTACT INFO</h3>
+         </div>
+         <div class="form-group">
+          <p><a href="#">CLICK HERE IF SAME AS CURRENTLY LOGIN USER</a></p>
+          </div>
+         <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>STATE</label>
+              <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+           <input class="form-control" type="text" name="state" placeholder="">
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12" >
+          <label for="instname">DISTRICT</label>
+            <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-apple" aria-hidden="true"></i></span>
+             <input class="form-control" type="text" name="dist" placeholder="">
+               </div>
+         </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>CITY</label>
+              <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-cc" aria-hidden="true"></i></span>
+           <input class="form-control" type="text" name="city" placeholder="">
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12" >
+          <label for="instname">PHONE NUMBER</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+             <input class="form-control" type="text" name="phoneno" placeholder="">
+         </div>
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" >
+            <label>EMAIL ID</label>
+            <div class="input-group">
+               <span class="input-group-addon"><i class="fa fa-google" aria-hidden="true"></i></span>
+               <input class="form-control" type="email" name="email" placeholder="">
+           </div>
+        </div>
+        <div class="col-md-6 col-sm-12" >
+          <label for="instname">COLLEGE/SCHOOL NAME</label>
+           <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+             <input class="form-control" type="text" name="instname" placeholder="">
+             </div>
+         </div>
+    </div>
+  </div>
+         <div class="form-group">
+            <p><button class="btn btn-primary">SUBMIT</button></p>
+         </div>
+     </form>
+  </div>
+</div>
+</div>
+<%- include("partials/footer.ejs") %>

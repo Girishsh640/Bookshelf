@@ -1,0 +1,78 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container toppadding">
+    <div class="row">
+                <div class="col-md-4 col-sm-12">
+            <div class="thumbnail">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                       <li class="item1 active"></li>
+                       <li class="item2"></li>
+                       <li class="item3"></li>
+                       <li class="item4"></li>
+                   </ol>
+                  <!-- Wrapper for slides -->
+             <div class="carousel-inner" role="listbox">
+
+                 <div class="item active">
+                    <img class="img-responsive" src="<%= book.image %>" style=" width: 350px; height: 600px;">
+                 </div>
+
+                 <div class="item">
+                      <img class="img-responsive" src="<%= book.image %>" style=" width: 350px; height: 600px;">
+                </div>
+    
+                <div class="item">
+                    <img class="img-responsive" src="<%= book.image %>" style=" width: 350px; height: 600px;">
+                 </div>
+
+                   <div class="item">
+                        <img class="img-responsive" src="<%= book.image %>" style=" width: 350px; height: 600px;">
+                 </div>
+           </div>
+
+                       <!-- Left and right controls -->
+                   <a class="left carousel-control" href="#myCarousel" role="button">
+                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                   </a>
+                   <a class="right carousel-control" href="#myCarousel" role="button">
+                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                       <span class="sr-only">Next</span>
+                </a>
+          </div>
+        </div>
+   </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="well">
+                         <p><strong>DETAILS OF THE BOOK</strong></p>
+                         <h5><strong>Submitted by </strong><%= book.author.username %></h5>
+                         <h5><strong>Reviews by the users - </strong><i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i>
+                         <i class="fa fa-star" aria-hidden="true"></i></h5>
+                         <h5><strong>Date - </strong><%= book.date.getDate()+'-'+(book.date.getMonth()+1)+'-'+book.date.getFullYear(); %></h5>
+                         <h5><strong>Title of the Book - </strong><%= book.name %></h5>
+                         <h5><strong>Expected Price - </strong><i class="fa fa-inr" aria-hidden="true"></i>  <%= book.mrp %></h5>
+            </div>
+                <div class="well">
+                        <p><strong>CONTACT INFORMATION</strong></p>
+                        <h5><strong>State - </strong><%= book.state %></h5>
+                        <h5><strong>District - </strong><%= book.dist %></h5>
+                        <h5><strong>City - </strong><%= book.city %></h5>
+                        <h5><strong>Phone no - </strong><%= book.phoneno %></h5>
+                        <h5><strong>Email ID - </strong><%= book.email %></h5>
+                        <h5><strong><%= book.instname %></strong></h5>
+                    </div>
+             <div class="well">
+                    <p><strong>DESCRIPTION ABOUT THE BOOK</strong></p>
+                    <p><%= book.description %>‘Panchatantra’ means ‘the five principles of conduct’. The stories of Panchatantra were written by Vishnusarman.
+                    In these stories, the main characters are played by animals.These stories are meant to teach children valuable life lessons.
+                    One such story is covered here about a Brahmin and three thieves. Let us read their story.</p>
+             </div>
+        </div>
+</div>
+</div>
+
+<%- include("partials/footer.ejs") %>

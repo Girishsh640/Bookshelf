@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+             
+ <div class="container">
+  <div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+             <h2 id="heading"><i class="fa fa-book" aria-hidden="true"></i> BOOKSELF HOPE YOU LIKE IT
+                              <i class="fa fa-book" aria-hidden="true"></i></h2>
+        </div>
+      </div>
+       
+            <div class="row">
+                 <div class="col-md-12 col-sm-12" >
+                     <div class="form-group">
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="username" placeholder="SEARCH BY TYPING THE NAME OF THE BOOKS">
+                             <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+     </div>   
+     <div class="row ">
+       <div class="col-lg-12">
+        <h4><i class="fa fa-handshake-o" aria-hidden="true"></i> Recently added Books or based on your previous search</h4>
+       </div>
+     </div>
+     <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+      <% books.forEach(function(book){ %>
+         <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+             <img class="img-responsive" src="<%= book.image %>" style=" width: 250px; height: 200px;">
+             <div class="caption">
+              <h4><%= book.name%></h4>
+              <p><form action ="<%= book._id %>" method="post">
+                  <button class="btn btn-primary btn-large">MORE INFO</button>
+              </form>
+                </p>
+             </div>
+            </div>
+         </div>
+       <% }); %>
+     </div>
+  </div>   
+<%- include("partials/footer.ejs") %>
